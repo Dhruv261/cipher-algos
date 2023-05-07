@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 const NewPassComp = () => {
   const [passTitle, setPassTitle] = useState();
-  const [algo, setAlgo] = useState('blowfish')
   const [password, setPassword] = useState();
   const [confirmPassword, setConfirmPassword] = useState();
 const navigate = useNavigate();

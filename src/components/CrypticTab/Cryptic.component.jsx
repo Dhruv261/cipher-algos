@@ -10,9 +10,7 @@ const Cryptic = () => {
   const [message, setMessage] = useState('');
   const [returnedMessage, setReturnedMessage] = useState('');
   const [algo, setAlgo] = useState('blowfish');
-  const [passwordNotSelected, setPasswordNotSelected] = useState('');
 
-  // -------------------------------------------------------------------------
   useEffect(() => {
     fetch('http://localhost:3001/pass-list', {
       method: 'GET',
@@ -39,13 +37,6 @@ const Cryptic = () => {
     message,
     algo,
   };
-
-  // const isPasswordSelected = () => {
-  //   if (toUsePassword === 'Select Your Password') {
-  //     setPasswordNotSelected('Please select your password!');
-  //   } else {
-  //   }
-  // };
 
   const encryptRequest = async () => {
     // e.preventDefault();
