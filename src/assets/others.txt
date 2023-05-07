@@ -1,0 +1,16 @@
+IDplaylist component---
+
+useEffect(() => {
+    const fetchData = async () => {
+      fetch(`http://localhost:3001/aplaylist/${params.id}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          token: 'Bearer' + sessionStorage.getItem('token'),
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => setIncomingData(data));
+    };
+    fetchData();
+  }, []);

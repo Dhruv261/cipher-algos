@@ -1,0 +1,32 @@
+.NewPassComp {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-newpass {
+  border: 1px solid;
+  margin: 30px;
+  padding: 25px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.new-pass-button {
+  margin-top: 20px;
+  padding: 20px 90px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: 1px solid;
+  transition: 500ms;
+  border: none;
+  background-color: #6366f1;
+}
+
+.new-pass-button:hover {
+  background-color: #2427ff;
+  color: rgb(255, 255, 255);
+}

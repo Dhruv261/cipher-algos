@@ -1,0 +1,84 @@
+.option-container-cryptic {
+  margin: 50px;
+  text-align: center;
+}
+
+.cryptic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-box {
+  border: 1px solid;
+  height: 300px;
+  width: 500px;
+  display: flex;
+  text-align: start;
+  resize: none;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 8px;
+  transition: 500ms;
+  border-color: #6366f1;
+  font-size: 1.15rem;
+}
+
+.message-input:focus {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: rgba(26, 163, 255, 0.33);
+}
+
+.message-output {
+  color: transparent;
+  text-shadow: 0 0 0 #2196f3;
+  cursor: default;
+}
+
+.message-output:focus {
+  outline: none;
+}
+
+.message-output:focus {
+  outline: none;
+}
+
+.select-cryptic {
+  background-color: aliceblue;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.select-cryptic *:hover {
+  background-color: rgb(124, 163, 197);
+}
+
+.button-div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.cipher-buttons {
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #6366f1;
+  width: 170px;
+  transition: 500ms;
+}
+
+.cipher-buttons:hover {
+  background-color: #2427ff;
+  color: rgb(255, 255, 255);
+}
+
+.input-password-cryptic {
+  border: 1px solid;
+  padding: 10px;
+  margin-bottom: -20px;
+  border-radius: 5px;
+  border-color: #6366f1;
+}
