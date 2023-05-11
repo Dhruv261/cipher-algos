@@ -35,7 +35,7 @@ const Authentication = () => {
       setErrorLogin('Fields cannot be empty');
     } else {
       setErrorLogin('');
-      fetch('http://localhost:3001/login', {
+      fetch('https://master--chipper-pika-f15036.netlify.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Authentication = () => {
       setErrorSignin("Passwords don't match.");
     } else {
       setErrorSignin('');
-      fetch('http://localhost:3001/signup', {
+      fetch('https://master--chipper-pika-f15036.netlify.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

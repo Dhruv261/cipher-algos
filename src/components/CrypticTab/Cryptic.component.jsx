@@ -12,7 +12,7 @@ const Cryptic = () => {
   const [algo, setAlgo] = useState('blowfish');
 
   useEffect(() => {
-    fetch('http://localhost:3001/pass-list', {
+    fetch('https://master--chipper-pika-f15036.netlify.app/pass-list', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const Cryptic = () => {
   const encryptRequest = async () => {
     // e.preventDefault();
     console.log('encryptRequest Working');
-    fetch('http://localhost:3001/encrypt', {
+    fetch('https://master--chipper-pika-f15036.netlify.app/encrypt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Cryptic = () => {
     // e.preventDefault();
     console.log('unauth encrypt');
     console.log('encryptRequest Working');
-    fetch('http://localhost:3001/encrypt-unauth', {
+    fetch('https://master--chipper-pika-f15036.netlify.app/encrypt-unauth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const Cryptic = () => {
   const decryptRequest = async () => {
     // e.preventDefault();
     console.log('encryptRequest Working');
-    fetch('http://localhost:3001/decrypt', {
+    fetch('https://master--chipper-pika-f15036.netlify.app/decrypt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ const Cryptic = () => {
   const decryptRequestUnauth = () => {
     // e.preventDefault();
     console.log('encryptRequest Working');
-    fetch('http://localhost:3001/decrypt-unauth', {
+    fetch('https://master--chipper-pika-f15036.netlify.app/decrypt-unauth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -15,18 +15,21 @@ const navigate = useNavigate();
         cipherPassword: password,
       };
       if (password === confirmPassword) {
-        fetch('http://localhost:3001/new-cipher-pass', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            token: 'Bearer' + sessionStorage.getItem('token'),
-          },
-          body: JSON.stringify(data),
-        })
+        fetch(
+          'https://master--chipper-pika-f15036.netlify.app/new-cipher-pass',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              token: 'Bearer' + sessionStorage.getItem('token'),
+            },
+            body: JSON.stringify(data),
+          }
+        )
           .then((response) => response.json())
           .then((data) => {
             // console.log(data);
-            if(data.response === 200) {
+            if (data.response === 200) {
               navigate('/');
             }
           })
