@@ -35,7 +35,7 @@ const Authentication = () => {
       setErrorLogin('Fields cannot be empty');
     } else {
       setErrorLogin('');
-      fetch('https://master--chipper-pika-f15036.netlify.app/login', {
+      fetch('https://adorable-bonnet-worm.cyclic.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Authentication = () => {
       setErrorSignin("Passwords don't match.");
     } else {
       setErrorSignin('');
-      fetch('https://master--chipper-pika-f15036.netlify.app/signup', {
+      fetch('https://adorable-bonnet-worm.cyclic.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

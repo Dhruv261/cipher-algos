@@ -12,18 +12,19 @@ const Cryptic = () => {
   const [algo, setAlgo] = useState('blowfish');
 
   useEffect(() => {
-    fetch('https://master--chipper-pika-f15036.netlify.app/pass-list', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        token: 'Bearer' + sessionStorage.getItem('token'),
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setPassList(data);
+    console.log('useEffect working')
+      fetch('https://adorable-bonnet-worm.cyclic.app/pass-list', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          token: 'Bearer' + sessionStorage.getItem('token'),
+        },
       })
-      .catch((error) => console.log(error));
+        .then((response) => response.json())
+        .then((data) => {
+          setPassList(data);
+        })
+        .catch((error) => console.log(error));
   }, []);
 
   const toSendData = {
@@ -41,7 +42,7 @@ const Cryptic = () => {
   const encryptRequest = async () => {
     // e.preventDefault();
     console.log('encryptRequest Working');
-    fetch('https://master--chipper-pika-f15036.netlify.app/encrypt', {
+    fetch('https://adorable-bonnet-worm.cyclic.app/encrypt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,7 +62,7 @@ const Cryptic = () => {
     // e.preventDefault();
     console.log('unauth encrypt');
     console.log('encryptRequest Working');
-    fetch('https://master--chipper-pika-f15036.netlify.app/encrypt-unauth', {
+    fetch('https://adorable-bonnet-worm.cyclic.app/encrypt-unauth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +80,7 @@ const Cryptic = () => {
   const decryptRequest = async () => {
     // e.preventDefault();
     console.log('encryptRequest Working');
-    fetch('https://master--chipper-pika-f15036.netlify.app/decrypt', {
+    fetch('https://adorable-bonnet-worm.cyclic.app/decrypt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -98,7 +99,7 @@ const Cryptic = () => {
   const decryptRequestUnauth = () => {
     // e.preventDefault();
     console.log('encryptRequest Working');
-    fetch('https://master--chipper-pika-f15036.netlify.app/decrypt-unauth', {
+    fetch('https://adorable-bonnet-worm.cyclic.app/decrypt-unauth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -136,7 +137,7 @@ const Cryptic = () => {
           className='select-cryptic'
           onChange={(e) => setAlgo(e.target.value)}
         >
-          <option className='options-cryptic' value='blwofish'>
+          <option className='options-cryptic' value='blowfish'>
             Blowfish
           </option>
           <option className='options-cryptic' value='aes'>
@@ -176,9 +177,16 @@ const Cryptic = () => {
         </div>
       ) : (
         <div className='option-container-cryptic'>
-          <input type="text" name="" id="" placeholder='Enter your password.' className='input-password-cryptic' onChange={(e) => {
-            setToUsePasswordUnauth(e.target.value);
-          }}/>
+          <input
+            type='text'
+            name=''
+            id=''
+            placeholder='Enter your password.'
+            className='input-password-cryptic'
+            onChange={(e) => {
+              setToUsePasswordUnauth(e.target.value);
+            }}
+          />
         </div>
       )}
 

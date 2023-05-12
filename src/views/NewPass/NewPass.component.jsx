@@ -15,17 +15,14 @@ const navigate = useNavigate();
         cipherPassword: password,
       };
       if (password === confirmPassword) {
-        fetch(
-          'https://master--chipper-pika-f15036.netlify.app/new-cipher-pass',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              token: 'Bearer' + sessionStorage.getItem('token'),
-            },
-            body: JSON.stringify(data),
-          }
-        )
+        fetch('https://adorable-bonnet-worm.cyclic.app/new-cipher-pass', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            token: 'Bearer' + sessionStorage.getItem('token'),
+          },
+          body: JSON.stringify(data),
+        })
           .then((response) => response.json())
           .then((data) => {
             // console.log(data);
